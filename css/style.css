@@ -1,0 +1,372 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+html,body {
+  height: 100%;
+  font-family: 'Droid Sans Mono', sans-serif;
+}
+
+p,h1,h2,h3,h4 {
+  font-family: 'Droid Sans Mono', sans-serif;
+}
+
+hr {
+  border-color:#191919;
+}
+
+/* wrapper for page content to push down footer */
+.page-container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* negative indent footer by its height */
+  margin: 0 auto -120px;
+  /* pad bottom by footer height */
+  padding: 0 0 120px;
+}
+
+/* set the fixed height of the footer here */
+footer {
+  height: 120px;
+  background-color: #222222;
+  border:0 solid #080808;
+  border-top-width: 1px;
+  margin-top:50px;
+}
+
+footer > .container {
+  padding: 20px;
+}
+
+body {
+  padding-top: 51px; 
+  background: #1E1E1E;
+  color: #f9f9f9;
+}
+a {
+  color:#bcbcbc;
+}
+.text-center {
+  padding-top: 20px;
+}
+
+#sidebar {
+  height: 100%;
+  padding-right: 0;
+  padding-top: 20px;
+}
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -41.6%;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -41.6%;
+  }
+  .row-offcanvas-right.active {
+    right: 41.6%;
+  }
+  .row-offcanvas-left.active {
+    left: 41.6%;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 41.6%;
+  }
+}
+ 
+/* theme */
+.btn,.form-control,.alert,.progress,.panel,.list-group,.well,.list-group-item:first-child {border-radius:1px;box-shadow:0 0 0;}
+.btn {border-color:transparent;}
+.btn-default,.well {
+  background-color:#cccccc;
+  border-color:#c0c0c0;
+}
+.btn-primary,.label-primary,.list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus,.btn.active,a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+   background-color:#0099CC;
+   border-color:transparent;
+}
+.btn-info,.label-info,.progress-bar-info {
+  background-color:#33b5e5;
+}
+.btn-success,.label-success,.progress-bar-success {
+  background-color:#669900;
+}
+.btn-danger,.label-danger,.progress-bar-danger {
+  background-color:#FF4444;
+}
+.btn-warning,.label-warning,.progress-bar-warning {
+  background-color:#FFBB33;
+  color:#444444;
+}
+     
+h3,h4,h5,.panel {
+   color:#555555;
+}
+.panel hr {
+   border-color:#efefef;
+}
+
+
+
+
+
+/*******
+FLIP BUTTON
+*******/
+
+/* CORE CSS */
+body {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+/* Container box to set the sides relative to */
+.cube {
+  width: 250px;
+  height: 100px;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* Position the faces */
+.default-state {
+  -webkit-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+  -o-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+.flip-to-top .active-state {
+  -webkit-transform: rotateX(89deg) translateZ(150px);
+  -moz-transform: rotateX(89deg) translateZ(150px);
+  -o-transform: rotateX(89deg) translateZ(150px);
+  -ms-transform: rotateX(89deg) translateZ(150px);
+  transform: rotateX(89deg) translateZ(150px);
+}
+.flip-to-bottom .active-state {
+  -webkit-transform: rotateX(-89deg) translateZ(-50px);
+  -moz-transform: rotateX(-89deg) translateZ(-50px);
+  -o-transform: rotateX(-89deg) translateZ(-50px);
+  -ms-transform: rotateX(-89deg) translateZ(-50px);
+  transform: rotateX(-89deg) translateZ(-50px);
+}
+/* Rotate the cube */
+.cube.flip-to-top:hover {
+  -webkit-transform: rotateX(-89deg);
+  -moz-transform: rotateX(-89deg);
+  -o-transform: rotateX(-89deg);
+  -ms-transform: rotateX(-89deg);
+  transform: rotateX(-89deg);
+}
+.cube.flip-to-bottom:hover {
+  -webkit-transform: rotateX(89deg);
+  -moz-transform: rotateX(89deg);
+  -o-transform: rotateX(89deg);
+  -ms-transform: rotateX(89deg);
+  transform: rotateX(89deg);
+}
+/* END CORE CSS */
+.cube {
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.default-state,
+.active-state,
+.button-link {
+  width: 250px;
+  height: 100px;
+  background: #2ecc71;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 100px;
+  -webkit-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -o-transition: background 250ms ease;
+  transition: background 250ms ease;
+  display:block;
+  margin: 0 auto;
+}
+.cube:hover .default-state, .button-link:hover {
+  background: #27af61;
+  color: #fff;
+  text-decoration: none;
+}
+.active-state {
+  background: url(../design/facebook.png) no-repeat 30px center #27af61;
+}
+#flipto {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #ccc;
+}
+
+
+
+
+
+
+/******
+CUSTOM
+******/
+#message {
+	display:none;
+}
+#opponentPanel {
+	display:none;
+}
+#performancePanel {
+	display:none;
+}
+#editor, #opponentEditor{
+	height:300px;
+}
+#startGame{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	min-height:100%;
+	background-color:rgba(0, 0, 0, 0.8);
+	z-index: 1500;
+}
+#startGame .login, #startGame .start, #startGame .loading, #startGame .youWin, #startGame .youLose{
+	margin-top:15%;
+	text-align:center;
+	width:100%;	
+	display:none;
+}
+#startGame .loading {
+	padding-top:120px;
+	background: url(../design/loading.gif) no-repeat top center;
+}
+#startGame .login{
+	display:block;
+}
+#startGame .login .logo{
+	max-width:100%;
+}
+#startGame .userImage, #startGame .opponentImage{
+	width:250px;
+	height:250px;
+	background-size: 250px;
+	border-radius:125px;
+	background-repeat: no-repeat;
+	-webkit-border-radius:125px;
+	-moz-border-radius:125px;
+	margin:15px auto;
+	display:none;
+}
+#startGame .userName, #startGame .opponentName{
+	font-weigth:bold;
+	font-size:120%;
+}
+#performance{
+	height:200px;
+}
+
+#sidebar .userImage, #sidebar .opponentImage{
+	width:100px;
+	height:100px;
+	background-size: 100px;
+	border-radius:50px;
+	background-repeat: no-repeat;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	margin:15px auto;
+	display:none;
+}
+#sidebar .player{
+	vertical-align:middle;
+	float:left;
+	width: 135px;
+}
+#sidebar .player .userName, #sidebar .player .opponentName{
+	text-align: center;
+	display: block;
+}
+#sidebar .vs{
+	font-size:30px;
+	padding:50px 10px;
+	vertical-align:middle;
+	float:left;
+}
+#sidebar .matches {
+	width: 95%;
+	clear: both;
+	list-style-type: none;
+	padding: 0px;
+	padding-top: 30px;
+}
+#sidebar  .matches li {
+	padding: 5px;
+	color:#AAAAAA;
+	font-size: 20px;
+}
+.flip-clock-label{
+	display: none;
+}
+
+.alert{
+	margin-top:20px;
+	margin-bottom:0px;
+}
+
+.list-group-item{
+	cursor:default;
+}
+
+.btn-run{
+	-webkit-transition: all 250ms ease;
+	-moz-transition: all 250ms ease;
+	-o-transition: all 250ms ease;
+	transition: all 250ms ease;
+	background: #2ecc71;
+}
+.btn-run:hover{
+  background: #27af61;
+}
+
+.flip-clock-wrapper{
+	margin:0px;
+	min-height: 100px;
+}
+#challenge h1{
+	min-height: 40px;
+}
+#challenge p{
+	min-height: 30px;
+}
+.navbar-brand{
+	background: url(../design/logo-icon.png) no-repeat center left;
+	padding-left: 40px;
+	margin-left: 10px;
+}
+
+/*
+TODO
+retirar isso
+#startGame{
+	display:none !important;
+}
+*/

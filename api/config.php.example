@@ -1,0 +1,8 @@
+<?php
+
+    require_once("idiorm.php");
+	ORM::configure('mysql:host=localhost;dbname=DBNAME');
+	ORM::configure('username', 'DBUSER');
+	ORM::configure('password', 'DBPASS');
+	
+?>
